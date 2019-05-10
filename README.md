@@ -1,4 +1,4 @@
-# demo
+# 青州天气app，flutter版本
 
 A new Flutter project.
 
