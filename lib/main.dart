@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import './componnets/header.dart';
 import 'package:flutter/rendering.dart';
-import './componnets/content.dart';
-import './componnets/list.dart';
+import './HomePage.dart';
 
 void main() {
   debugPaintSizeEnabled = false; 
@@ -23,14 +21,7 @@ class MyApp extends StatelessWidget {
             centerTitle: true
           ),
           body: Center(
-            child: new Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Header(),
-                  Content(),
-                  List()
-                ],
-              )
+            child: HomePage()
           ),
           backgroundColor: Color.fromRGBO(95, 161, 208, 1)
         ));
