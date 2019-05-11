@@ -85,7 +85,9 @@ class _HomePageState extends State<HomePage> {
             Content(
               data: _data,
             ),
-            List()
+            MyList(
+              data: _data
+            )
           ],
         ),
       );
