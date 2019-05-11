@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Content extends StatelessWidget {
-  const Content({Key key}) : super(key: key);
+  final data;
+  const Content({Key key, @required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,43 +30,33 @@ class Content extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          '21',
+                          data["data"]["wendu"],
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 80.0,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          '晴',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16
-                          ),
+                          data["data"]['forecast'][0]['type'],
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                         Text(
-                          '15:43:00 发布',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16
-                          ),
+                          "${data['data']['forecast'][0]['ymd']} 发布",
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         )
                       ],
                     ),
                     alignment: Alignment.center,
                   ),
                   new Container(
-                    padding: EdgeInsets.only(
-                      bottom: 100.00
-                    ),
-                    child: Text(
-                      '℃',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25.0,
-                        fontWeight: FontWeight.bold
-                      ),
-                  )
-                  )
+                      padding: EdgeInsets.only(bottom: 100.00),
+                      child: Text(
+                        '℃',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25.0,
+                            fontWeight: FontWeight.bold),
+                      ))
                 ],
               ),
               alignment: Alignment.center,
